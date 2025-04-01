@@ -40,3 +40,32 @@
 .read-the-docs {
   color: #888;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #FF6060;
+  
+}
+
+.headernav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+  color: black;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
