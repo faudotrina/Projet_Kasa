@@ -11,11 +11,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6666666667));
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6666666667));
 }
 
 @keyframes logo-spin {
@@ -26,13 +28,11 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-
 .card {
   padding: 2em;
 }
@@ -41,6 +41,7 @@
   color: #888;
 }
 
+/*Header */
 .header {
   display: flex;
   align-items: center;
@@ -49,7 +50,6 @@
 
 .header h1 {
   color: #FF6060;
-  
 }
 
 .headernav {
@@ -57,15 +57,24 @@
   gap: 20px;
 }
 
+/*Footer*/
+.footer {
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-link {
   text-decoration: none;
   color: inherit;
   font-size: 24px;
   color: black;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 500;
 }
 
 .nav-link:hover {
   text-decoration: underline;
 }
+
+/*# sourceMappingURL=style.css.map */

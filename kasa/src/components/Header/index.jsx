@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import kasaLogo from '../../assets/images/logo.svg'
  
 function Header() {
     return (
         <header className='header'>
-        <h1>Kasa</h1>
+        <img src={kasaLogo} alt="logo" />
 
         <nav className='headernav'>
             <Link to="/" className="nav-link">Accueil</Link>
