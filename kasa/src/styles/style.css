@@ -1,8 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo {
@@ -41,27 +39,31 @@
   color: #888;
 }
 
-/*Header */
 .header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header h1 {
-  color: #FF6060;
+  color: #ff6060;
 }
 
 .headernav {
   display: flex;
-  gap: 20px;
+  gap: 57px;
 }
 
-/*Footer*/
-.footer {
-  object-fit: cover;
+#footer {
+  width: -webkit-fill-available;
   margin: 0;
   padding: 0;
+}
+#footer img {
+  display: flex;
 }
 
 .nav-link {
@@ -76,5 +78,30 @@
 .nav-link:hover {
   text-decoration: underline;
 }
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76%;
+  background-image: url(/src/assets/images/mer.png);
+  background-size: cover;
+  background-position: center;
+  padding: 5%;
+  border-radius: 25px;
+  box-shadow: 6px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  margin: 0px 0px 0px 112px;
+}
+
+.cover-text {
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 48px;
+}
+
+
 
 /*# sourceMappingURL=style.css.map */

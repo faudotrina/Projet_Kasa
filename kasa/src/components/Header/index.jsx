@@ -4,7 +4,9 @@ import kasaLogo from '../../assets/images/logo.svg'
 function Header() {
     return (
         <header className='header'>
+        <a href="/">
         <img src={kasaLogo} alt="logo" />
+        </a>
 
         <nav className='headernav'>
             <Link to="/" className="nav-link">Accueil</Link>

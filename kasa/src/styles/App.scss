@@ -1,3 +1,6 @@
+$primary-color: #FF6060;
+$font-stack: 'Montserrat';
+
 #root {
   text-align: center;
   overflow: hidden;
@@ -81,7 +84,7 @@
   color: inherit;
   font-size: 24px;
   color: black;
-  font-family: 'Montserrat';
+  font-family: $font-stack;
   font-weight: 500;
 }
 
@@ -109,5 +112,6 @@
   font-weight: 700;
   font-size: 48px;
 }
+
 
 /*# sourceMappingURL=style.css.map */
