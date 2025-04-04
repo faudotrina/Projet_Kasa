@@ -1,0 +1,41 @@
+@use 'App';
+@mixin box-style($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-style($color, $size, $ffamily, $fweight) {
+  color: $color;
+  font-size: $size;
+  font-family: $ffamily;
+  font-weight: $fweight;
+}
+
+$font-stack: 'Montserrat';
+
+.grand-carre {
+  @include box-style(80.8%, 829px);
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 3% 0% 3% 7.7%;
+  padding: 3% 2% 0% 2%;
+  justify-content: space-around;
+}
+
+.petit-carre {
+  @include box-style(30%, 40%);
+  background-color: #ff6060;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.text-carre {
+  @include text-style(white, 18px, $font-stack, 700);
+  margin-left: 20px;
+}

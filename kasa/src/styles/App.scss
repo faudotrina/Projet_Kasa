@@ -1,3 +1,10 @@
+@mixin text-style($color, $size, $ffamily, $fweight) {
+  color: $color;
+  font-size: $size;
+  font-family: $ffamily;
+  font-weight: $fweight;
+}
+
 $primary-color: #FF6060;
 $font-stack: 'Montserrat';
 
@@ -94,8 +101,8 @@ $font-stack: 'Montserrat';
 
 .cover {
   @include center();
-  width: 76%;
-  background-image: url(/src/assets/images/mer.png);
+  width: 75%;
+  background-image: url('/src/assets/images/mer.png');
   background-size: cover;
   background-position: center;
   padding: 5%;
@@ -115,3 +122,28 @@ $font-stack: 'Montserrat';
 
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* ... */
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    header,
+    footer,
+    main {
+        width: 100%;
+        /* Assure une largeur de 100% */
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+}

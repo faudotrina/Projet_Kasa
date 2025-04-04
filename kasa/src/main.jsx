@@ -7,15 +7,18 @@ import Header from './components/Header/index.jsx'
 import Footer from './components/Footer/index.jsx'
 import Error from './components/Error/index.jsx'
 import Cover from './components/Cover/index.jsx'
+import LayoutAvecCover from './layouts/LayoutAvecCover'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Header />
-      <Cover />
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/survey" element={<Survey />} />
+        <Route element={<LayoutAvecCover />}>
+          <Route path="/" element={<App />} />
+          <Route path="/survey" element={<Survey />} />
+        </Route>
+
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

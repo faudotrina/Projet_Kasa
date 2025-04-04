@@ -4,26 +4,21 @@
     font-size: $size;
     font-family: $ffamily;
     font-weight: $fweight;
-}
-
-$primary-color: #FF6060;
-$font-stack: 'Montserrat';
+  }
+  
+  $primary-color: #FF6060;
+  $font-stack: 'Montserrat';
 
 .errorTitle {
     @include text-style($primary-color, 288px, $font-stack, 700);
     vertical-align: bottom;
-    margin: 80px 0px 100px 0px;
-}
-
-.cover {
-    display: none;
-    // padding: 0;
+    margin: 0;
 }
 
 .errorText {
     @include text-style($primary-color, 36px, $font-stack, 500);
     vertical-align: bottom;
-    margin: 80px 0px 10% 0px;
+    margin: 50px 0px 8% 0px;
 }
 
 .errorReturn {
@@ -33,5 +28,6 @@ $font-stack: 'Montserrat';
 }
 
 .errorPage {
-    margin-bottom: 175px;
+    margin-bottom: 100px;
+    overflow: hidden;
 }
