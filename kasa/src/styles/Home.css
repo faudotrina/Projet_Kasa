@@ -1,0 +1,75 @@
+#root {
+  text-align: center;
+  overflow: hidden;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #ff6060;
+}
+
+.headernav {
+  display: flex;
+  gap: 57px;
+}
+
+#footer {
+  width: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+}
+#footer img {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+  color: black;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* ... */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  header,
+  footer,
+  main {
+    width: 100%;
+    /* Assure une largeur de 100% */
+  }
+  header {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=Home.css.map */

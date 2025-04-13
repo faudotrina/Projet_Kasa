@@ -1,0 +1,36 @@
+@use 'Home';
+
+@mixin margin-body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+  color: black;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.header {
+  @include margin-body;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #ff6060;
+}
+
+.headernav {
+  display: flex;
+  gap: 57px;
+}

@@ -1,13 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import Cover from '../components/Cover';
+import { Outlet } from 'react-router-dom'
+import Banner from '../components/Banner/Banner.jsx'
 
 function LayoutAvecCover() {
   return (
     <>
-      <Cover />
+      <Banner />
       <Outlet />
     </>
-  );
+  )
 }
 
-export default LayoutAvecCover;
+export default LayoutAvecCover

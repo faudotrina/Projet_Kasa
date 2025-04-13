@@ -1,4 +1,4 @@
-@use 'App';
+@use 'Home';
 @mixin box-style($width, $height) {
   width: $width;
   height: $height;
@@ -14,14 +14,14 @@
 $font-stack: 'Montserrat';
 
 .grand-carre {
-  @include box-style(80.8%, 829px);
+  @include box-style(72%, 829px);
   background-color: #eee;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   gap: 5%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 3% 0% 3% 7.7%;
+  margin: 3% 0% 3% 12%;
   padding: 3% 2% 0% 2%;
   justify-content: space-around;
 }

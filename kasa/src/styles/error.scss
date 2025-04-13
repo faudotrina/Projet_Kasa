@@ -1,33 +1,33 @@
-@use 'App';
+@use 'Home';
 @mixin text-style($color, $size, $ffamily, $fweight) {
-    color: $color;
-    font-size: $size;
-    font-family: $ffamily;
-    font-weight: $fweight;
-  }
-  
-  $primary-color: #FF6060;
-  $font-stack: 'Montserrat';
+  color: $color;
+  font-size: $size;
+  font-family: $ffamily;
+  font-weight: $fweight;
+}
+
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
 
 .errorTitle {
-    @include text-style($primary-color, 288px, $font-stack, 700);
-    vertical-align: bottom;
-    margin: 0;
+  @include text-style($primary-color, 288px, $font-stack, 700);
+  vertical-align: bottom;
+  margin: 0;
 }
 
 .errorText {
-    @include text-style($primary-color, 36px, $font-stack, 500);
-    vertical-align: bottom;
-    margin: 50px 0px 8% 0px;
+  @include text-style($primary-color, 36px, $font-stack, 500);
+  vertical-align: bottom;
+  margin: 50px 0px 8% 0px;
 }
 
 .errorReturn {
-    @include text-style(black, 18px, $font-stack, 500);
-    text-decoration: underline solid;
-    padding-bottom: 50px;
+  @include text-style(black, 18px, $font-stack, 500);
+  text-decoration: underline solid;
+  padding-bottom: 50px;
 }
 
 .errorPage {
-    margin-bottom: 100px;
-    overflow: hidden;
+  margin-bottom: 100px;
+  overflow: hidden;
 }

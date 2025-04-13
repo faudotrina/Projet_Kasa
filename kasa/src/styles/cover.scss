@@ -1,0 +1,28 @@
+@use 'Home';
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover {
+  @include center();
+  width: 66%;
+  background-image: url('/src/assets/images/mer.png');
+  background-size: cover;
+  background-position: center;
+  padding: 5%;
+  border-radius: 25px;
+  box-shadow: 6px 5px 0px #00000040;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  margin: 0px 0px 0px 12%;
+}
+
+.cover-text {
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 48px;
+}

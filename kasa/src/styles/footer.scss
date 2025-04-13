@@ -1,0 +1,10 @@
+@use 'Home';
+
+#footer {
+  width: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+  img {
+    display: flex;
+  }
+}
