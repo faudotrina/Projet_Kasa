@@ -1,15 +1,16 @@
-function Cards() {
-  const nbCarres = 6
+import '../../styles/cards.scss'
 
+function Cards({ logements }) {
   return (
     <>
-      {Array.from({ length: nbCarres }).map((_, i) => (
-        <div key={i} className="petit-carre">
-          <p className="text-carre">Titre de la location</p>
+      {logements.map((logement) => (
+        <div key={logement.id} className="petit-carre">
+          <img src={logement.cover} alt={logement.title} className="image-carre" />
+          <p className="text-carre">{logement.title}</p>
         </div>
       ))}
     </>
-  )
+  );
 }
 
-export default Cards
+export default Cards;

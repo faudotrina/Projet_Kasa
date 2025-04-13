@@ -1,4 +1,6 @@
 @use 'Home';
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
 
 @mixin margin-body {
   max-width: 1280px;

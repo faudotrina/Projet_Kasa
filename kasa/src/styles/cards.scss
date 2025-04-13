@@ -1,4 +1,7 @@
 @use 'Home';
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
+
 @mixin box-style($width, $height) {
   width: $width;
   height: $height;
@@ -14,12 +17,12 @@
 $font-stack: 'Montserrat';
 
 .grand-carre {
-  @include box-style(72%, 829px);
+  @include box-style(72%, 100%);
   background-color: #eee;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  gap: 5%;
+  gap: 1%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 3% 0% 3% 12%;
   padding: 3% 2% 0% 2%;
@@ -27,15 +30,27 @@ $font-stack: 'Montserrat';
 }
 
 .petit-carre {
-  @include box-style(30%, 40%);
-  background-color: #ff6060;
-  border-radius: 8px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  background-color: $primary-color;
+  padding: 0;
+  margin: 0 0 3% 0;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  position: relative; 
+  overflow: hidden;
+}
+
+.image-carre {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0;
 }
 
 .text-carre {
   @include text-style(white, 18px, $font-stack, 700);
-  margin-left: 20px;
+  margin: 0;
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
 }

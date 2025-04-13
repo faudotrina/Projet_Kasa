@@ -1,3 +1,5 @@
+import '../../styles/error.scss'
+
 function Error() {
   return (
     <div className="errorPage">

@@ -1,4 +1,6 @@
 @use 'Home';
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
 
 @mixin center {
   display: flex;
@@ -9,7 +11,6 @@
 .cover {
   @include center();
   width: 66%;
-  background-image: url('/src/assets/images/mer.png');
   background-size: cover;
   background-position: center;
   padding: 5%;

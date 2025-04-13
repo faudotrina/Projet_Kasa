@@ -1,4 +1,7 @@
 @use 'Home';
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
+
 @mixin text-style($color, $size, $ffamily, $fweight) {
   color: $color;
   font-size: $size;
@@ -12,7 +15,7 @@ $font-stack: 'Montserrat';
 .errorTitle {
   @include text-style($primary-color, 288px, $font-stack, 700);
   vertical-align: bottom;
-  margin: 0;
+  margin: 8% 0px 0px 0px;
 }
 
 .errorText {
@@ -28,6 +31,6 @@ $font-stack: 'Montserrat';
 }
 
 .errorPage {
-  margin-bottom: 100px;
+  margin-bottom: 10%;
   overflow: hidden;
 }

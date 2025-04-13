@@ -1,4 +1,5 @@
 import blackFooter from '../../assets/images/blackFooter.jpg'
+import '../../styles/footer.scss'
 
 function Footer() {
   return (
