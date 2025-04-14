@@ -8,16 +8,12 @@ import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Error from './components/Error/Error.jsx'
 
-import LayoutAvecCover from './layouts/LayoutAvecCover.jsx'
-
 createRoot(document.getElementById('root')).render(
   <Router>
     <Header />
     <Routes>
-      <Route element={<LayoutAvecCover />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/apropos" element={<Apropos />} />
-      </Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/apropos" element={<Apropos />} />
       <Route path="*" element={<Error />} />
     </Routes>
     <Footer />

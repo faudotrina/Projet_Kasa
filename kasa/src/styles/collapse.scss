@@ -1,0 +1,35 @@
+@use 'Home';
+$primary-color: #ff6060;
+$font-stack: 'Montserrat';
+
+@mixin box-style($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.dropbtn {
+  background-color: $primary-color;
+  border-radius: 5px;
+  width: 68%;
+  padding: 1%;
+  margin: 0%;
+  border: none;
+  font-family: $font-stack;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  margin: 2% 0% 1% 0%;
+}
+
+.dropdown-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 17%;
+  padding-right: 17%;
+  padding-bottom: 1%;
+  font-size: 18px;
+  margin: 0;
+  left: 10%;
+}

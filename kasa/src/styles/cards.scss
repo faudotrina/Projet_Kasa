@@ -17,14 +17,14 @@ $font-stack: 'Montserrat';
 $font-stack: 'Montserrat';
 
 .grand-carre {
-  @include box-style(72%, 100%);
+  @include box-style(82%, 100%);
   background-color: #eee;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   gap: 1%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 3% 0% 3% 12%;
+  margin: 3% 0% 3% 7%;
   padding: 3% 2% 0% 2%;
   justify-content: space-around;
 }

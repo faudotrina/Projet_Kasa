@@ -1,15 +1,14 @@
 import '../../styles/banner.scss'
-import mer from '../../assets/images/mer.png'
 
-function Cover() {
+function Cover({ image, text }) {
   return (
     <section
       className="cover"
       style={{
-        backgroundImage: `url(${mer})`,
+        backgroundImage: `url(${image})`,
       }}
     >
-      <h1 className="cover-text">Chez vous, partout et ailleurs</h1>
+      <h1 className="cover-text">{text}</h1>
     </section>
   )
 }

@@ -1,11 +1,16 @@
 import Cards from '../components/Cards/Cards'
 import logements from '../data/logements.json'
+import Banner from '../components/Banner/Banner.jsx'
+import mer from '../assets/images/mer.png'
 
 function Home() {
   return (
-    <section className="grand-carre">
-      <Cards logements={logements} />
-    </section>
+    <>
+      <Banner image={mer} text={'Chez vous, partout et ailleurs'} />
+      <section className="grand-carre">
+        <Cards logements={logements} />
+      </section>
+    </>
   )
 }
 
