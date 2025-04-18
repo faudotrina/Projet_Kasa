@@ -1,16 +1,16 @@
 import '../../styles/banner.scss'
 
-function Cover({ image, text }) {
+function Banner({ image, text }) {
   return (
     <section
-      className="cover"
+      className="banner"
       style={{
         backgroundImage: `url(${image})`,
       }}
     >
-      <h1 className="cover-text">{text}</h1>
+      <h1 className="banner-text">{text}</h1>
     </section>
   )
 }
 
-export default Cover
+export default Banner

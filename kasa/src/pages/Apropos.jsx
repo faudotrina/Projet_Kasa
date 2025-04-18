@@ -6,7 +6,7 @@ import Collapse from '../components/Collapse/Collapse.jsx'
 function Apropos() {
   return (
     <>
-      <Banner image={montagne} />
+      <Banner className="cover" image={montagne} />
 
       <Collapse
         title="Fiabilite"

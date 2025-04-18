@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ChevronUp, ChevronDown  } from 'lucide-react';
 import '../../styles/collapse.scss'
 
 function Collapse({ title, text }) {
@@ -8,7 +8,8 @@ function Collapse({ title, text }) {
   return (
     <div className="dropdown">
       <button onClick={() => setIsOpen(!isOpen)} className="dropbtn">
-        {title} <i class="fa-solid fa-angle-up"></i>
+        {title} 
+        {isOpen ? <ChevronDown className='chevron' /> : <ChevronUp className='chevron' />}
       </button>
       {isOpen && <div className="dropdown-content">{text}</div>}
     </div>
