@@ -2,25 +2,124 @@
 $primary-color: #ff6060;
 $font-stack: 'Montserrat';
 
-@mixin text-style($color, $size, $ffamily, $fweight) {
+@mixin text-style($color, $size, $ffamily, $fweight, $justify-content) {
   color: $color;
   font-size: $size;
   font-family: $ffamily;
   font-weight: $fweight;
+  justify-content: $justify-content;
+  display: flex;
+  padding-left: 7.3%;
 }
 
+// .fiche {
+//   padding: 0% 6% 0% 6%;
+// }
+
 .fiche-title {
-  @include text-style($primary-color, 36px, $font-stack, 500); 
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 7.3%;
+  @include text-style($primary-color, 36px, $font-stack, 500, flex-start);
   margin-bottom: 0px;
+  margin-top: 3%;
 }
 
 .fiche-paragraph {
-  @include text-style(black, 18px, $font-stack, 500); 
+  @include text-style(black, 18px, $font-stack, 500, flex-start);
+  margin-top: 5px;
+}
+
+.fiche-tags {
+  margin-top: 10px;
+}
+
+.tags {
   display: flex;
   justify-content: flex-start;
   padding-left: 7.3%;
-  margin-top: 5px;
+  margin-top: 4%;
+  gap: 1%;
+}
+
+.tags-name {
+  border: solid 5px $primary-color;
+  border-radius: 50px;
+  background-color: $primary-color;
+  color: white;
+  white-space: nowrap;
+  display: inline-block;
+  width: 10%;
+}
+
+.fiche-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 8% 0% 2%;
+  align-items: flex-start;
+}
+
+.fiche-main {
+  flex: 2;
+}
+
+.host {
+  display: flex;
+  padding-top: 15%;
+  gap: 5%;
+}
+
+.host-p {
+  @include text-style($primary-color, 18px, $font-stack, 500, flex-start);
+}
+
+.host-picture {
+  color: #c4c4c4;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fiche-host-rating {
+  flex: 1;
+  align-items: flex-end;
+}
+
+.rating {
+  padding-left: 46%;
+}
+
+.fiche-collapse {
+  display: flex;
+  padding: 2% 0% 2% 0%;
+}
+
+.collapse-block {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.liste-equipements {
+  list-style: none;
+}
+
+.star-icon {
+  margin-right: 4px;
+}
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.chevron-left {
+  left: -80%;
+}
+
+.chevron-right {
+  right: 7%;
 }

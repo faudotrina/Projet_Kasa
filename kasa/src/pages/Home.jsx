@@ -8,7 +8,7 @@ function Home() {
     <>
       <Banner image={mer} text={'Chez vous, partout et ailleurs'} />
       <section className="grand-carre">
-        <Cards logements={logements} />
+        <Cards props={logements} />
       </section>
     </>
   )

@@ -8,10 +8,6 @@ $font-stack: 'Montserrat';
   justify-content: center;
 }
 
-.bannerfiche {
-  height: 300px;
-}
-
 .banner {
   @include center();
   width: 82%;
@@ -34,4 +30,11 @@ $font-stack: 'Montserrat';
   margin: 0;
 }
 
+.banner-fiche {
+  height: 400px;
+}
 
+.banner.banner-fiche {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

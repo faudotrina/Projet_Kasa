@@ -1,9 +1,9 @@
 import '../../styles/banner.scss'
 
-function Banner({ image, text }) {
+function Banner({ image, text, className = '' }) {
   return (
     <section
-      className="banner"
+      className={`banner ${className}`}
       style={{
         backgroundImage: `url(${image})`,
       }}

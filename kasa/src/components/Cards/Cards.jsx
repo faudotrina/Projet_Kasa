@@ -1,16 +1,16 @@
 import '../../styles/cards.scss'
 
-function Cards({ logements }) {
+function Cards({ props }) {
   return (
     <>
-      {logements.map((logement) => (
-        <article key={logement.id} className="petit-carre">
+      {props.map((prop) => (
+        <article key={prop.id} className="petit-carre">
           <img
-            src={logement.cover}
-            alt={logement.title}
+            src={prop.cover}
+            alt={prop.title}
             className="image-carre"
           />
-          <p className="text-carre">{logement.title}</p>
+          <p className="text-carre">{prop.title}</p>
         </article>
       ))}
     </>

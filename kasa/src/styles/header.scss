@@ -2,12 +2,6 @@
 $primary-color: #ff6060;
 $font-stack: 'Montserrat';
 
-@mixin margin-body {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
 .nav-link {
   text-decoration: none;
   color: inherit;
@@ -22,7 +16,8 @@ $font-stack: 'Montserrat';
 }
 
 .header {
-  @include margin-body;
+  margin: 0% 6% 0% 6%;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,4 +30,9 @@ $font-stack: 'Montserrat';
 .headernav {
   display: flex;
   gap: 57px;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+  transition: transform 400ms;
 }
