@@ -118,8 +118,17 @@ $font-stack: 'Montserrat';
 
 .chevron-left {
   left: -80%;
+  color: white;
+  &:hover {
+    color: #ff6060;
+    transition: transform 500ms;
+  }
 }
 
 .chevron-right {
   right: 5%;
+  color: white;
+  &:hover {
+    color: #ff6060;
+  }
 }

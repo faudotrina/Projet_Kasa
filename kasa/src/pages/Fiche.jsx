@@ -1,38 +1,34 @@
-import { useParams } from 'react-router-dom'
 import Banner from '../components/Banner/Banner.jsx'
+
 import logements from '../data/logements.json'
-import { useNavigate } from 'react-router-dom'
+
+import { useNavigate, useParams } from 'react-router-dom'
 import Collapse from '../components/Collapse/Collapse'
-import { useEffect, useState } from 'react'
 import '../styles/fiche.scss'
+
 import { Star } from 'lucide-react'
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 
 function Fiche() {
+  const { id } = useParams()
   const navigate = useNavigate()
-  const { id } = useParams() // récupère l'id de l'URL
+
   const currentIndex = logements.findIndex((logement) => logement.id === id)
   const logement = logements[currentIndex]
 
-  const goToNextLogement = () => {
+  if (currentIndex === -1) {
+    return <div>Logement introuvable</div>
+  }
+
+  const next = () => {
     const nextIndex = (currentIndex + 1) % logements.length
-    const nextId = logements[nextIndex].id
-    navigate(`/fiche/${nextId}`)
+    navigate(`/fiche/${logements[nextIndex].id}`)
   }
 
-  const goToPreviousLogement = () => {
+  const prev = () => {
     const prevIndex = (currentIndex - 1 + logements.length) % logements.length
-    const prevId = logements[prevIndex].id
-    navigate(`/fiche/${prevId}`)
+    navigate(`/fiche/${logements[prevIndex].id}`)
   }
-
-  useEffect(() => {
-    if (currentIndex === -1) {
-      navigate('/404', { replace: true })
-    }
-  }, [currentIndex, navigate])
-
-  if (currentIndex === -1) return null // empêche le rendu avant la redirection
 
   return (
     <>
@@ -40,14 +36,10 @@ function Fiche() {
         <div className="banner-wrapper">
           <Banner image={logement.cover} className="banner-fiche" />
           <div className="chevron chevron-left">
-            <ChevronLeft
-              size={150}
-              color="white"
-              onClick={goToPreviousLogement}
-            />
+            <ChevronLeft size={150} onClick={prev} />
           </div>
           <div className="chevron chevron-right">
-            <ChevronRight size={150} color="white" onClick={goToNextLogement} />
+            <ChevronRight size={150} onClick={next} />
           </div>
         </div>
 
