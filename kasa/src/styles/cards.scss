@@ -15,13 +15,13 @@ $font-stack: 'Montserrat';
 }
 
 .grand-carre {
-  @include box-style(82%, 100%);
+  height: 100%;
   background-color: #eee;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  padding: 3% 2% 0% 2%;
-  margin: 3% 0% 3% 7%;
+  padding: 3% 3% 3% 3%;
+  margin: 3% 0% 3% 0%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -33,12 +33,11 @@ $font-stack: 'Montserrat';
   height: 340px;
   display: flex;
   flex-direction: column;
-  &:hover .text-carre {
-    color: $primary-color;
-  }
 }
 
 .image-carre {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -51,6 +50,22 @@ $font-stack: 'Montserrat';
   position: absolute;
   bottom: 10px;
   left: 10px;
+  text-align: start;
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.2)
+  );
+  pointer-events: none; /* pour ne pas gêner les interactions */
 }
 
 @media (max-width: 900px) {

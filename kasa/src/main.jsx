@@ -12,12 +12,14 @@ import Error from './components/Error/Error.jsx'
 createRoot(document.getElementById('root')).render(
   <Router>
     <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/apropos" element={<Apropos />} />
-      <Route path="/fiche/:id" element={<Fiche />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
+    <main role="main">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/apropos" element={<Apropos />} />
+        <Route path="/fiche/:id" element={<Fiche />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </main>
     <Footer />
   </Router>,
 )

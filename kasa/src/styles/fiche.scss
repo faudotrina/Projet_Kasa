@@ -9,12 +9,7 @@ $font-stack: 'Montserrat';
   font-weight: $fweight;
   justify-content: $justify-content;
   display: flex;
-  padding-left: 7.3%;
 }
-
-// .fiche {
-//   padding: 0% 6% 0% 6%;
-// }
 
 .fiche-title {
   @include text-style($primary-color, 36px, $font-stack, 500, flex-start);
@@ -34,7 +29,6 @@ $font-stack: 'Montserrat';
 .tags {
   display: flex;
   justify-content: flex-start;
-  padding-left: 7.3%;
   margin-top: 4%;
   gap: 1%;
 }
@@ -46,13 +40,12 @@ $font-stack: 'Montserrat';
   color: white;
   white-space: nowrap;
   display: inline-block;
-  width: 10%;
+  min-width: 15%;
 }
 
 .fiche-content {
   display: flex;
   justify-content: space-between;
-  padding: 0% 8% 0% 2%;
   align-items: flex-start;
 }
 
@@ -88,6 +81,7 @@ $font-stack: 'Montserrat';
 .fiche-collapse {
   display: flex;
   padding: 2% 0% 2% 0%;
+  gap: 50px;
 }
 
 .collapse-block {
@@ -117,18 +111,18 @@ $font-stack: 'Montserrat';
 }
 
 .chevron-left {
-  left: -80%;
+  left: -90%;
   color: white;
-  &:hover {
-    color: #ff6060;
-    transition: transform 500ms;
-  }
 }
 
 .chevron-right {
-  right: 5%;
+  right: -1%;
   color: white;
-  &:hover {
-    color: #ff6060;
-  }
+}
+
+.nombreImage {
+  @include text-style(white, 18px, $font-stack, 500, none);
+  position: absolute;
+  transform: translateY(-45px);
+  display: inline;
 }

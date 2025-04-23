@@ -2,7 +2,8 @@ import Banner from '../components/Banner/Banner.jsx'
 
 import logements from '../data/logements.json'
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import Collapse from '../components/Collapse/Collapse'
 import '../styles/fiche.scss'
 
@@ -11,30 +12,35 @@ import { ChevronRight, ChevronLeft } from 'lucide-react'
 
 function Fiche() {
   const { id } = useParams()
-  const navigate = useNavigate()
+  const logement = logements.find((logement) => logement.id === id)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const currentIndex = logements.findIndex((logement) => logement.id === id)
-  const logement = logements[currentIndex]
-
-  if (currentIndex === -1) {
+  if (!logement) {
     return <div>Logement introuvable</div>
   }
 
   const next = () => {
-    const nextIndex = (currentIndex + 1) % logements.length
-    navigate(`/fiche/${logements[nextIndex].id}`)
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % logement.pictures.length,
+    )
   }
 
   const prev = () => {
-    const prevIndex = (currentIndex - 1 + logements.length) % logements.length
-    navigate(`/fiche/${logements[prevIndex].id}`)
+    setCurrentImageIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + logement.pictures.length) % logement.pictures.length,
+    )
   }
 
   return (
     <>
       <section className="fiche">
         <div className="banner-wrapper">
-          <Banner image={logement.cover} className="banner-fiche" />
+          <Banner
+            image={logement.pictures[currentImageIndex]}
+            className="banner-fiche"
+          />
+          <span className='nombreImage'>{currentImageIndex + 1 % logement.pictures.length} / {logement.pictures.length}</span>
           <div className="chevron chevron-left">
             <ChevronLeft size={150} onClick={prev} />
           </div>
