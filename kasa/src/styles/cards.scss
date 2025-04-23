@@ -68,14 +68,20 @@ $font-stack: 'Montserrat';
   pointer-events: none; /* pour ne pas gêner les interactions */
 }
 
-@media (max-width: 900px) {
+/* Small devices (phones, less than 768px) */
+@media (max-width: 320px) {
   .grand-carre {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .petit-carre {
+    height: 250px;
+  }
+
+  .text-carre {
+    font-size: 14px;
   }
 }
 
-@media (max-width: 600px) {
-  .grand-carre {
-    grid-template-columns: 1fr;
-  }
-}

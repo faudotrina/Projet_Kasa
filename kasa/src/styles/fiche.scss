@@ -126,3 +126,31 @@ $font-stack: 'Montserrat';
   transform: translateY(-45px);
   display: inline;
 }
+
+@media (max-width: 320px) {
+  .chevron chevron-left {
+    transform: translateX(4px);
+  }
+
+  .chevron chevron-right {
+    transform: translateX(5px);
+  }
+
+  .fiche-title {
+    @include text-style($primary-color, 18px, $font-stack, 500, flex-start);
+  }
+
+  .fiche-paragraph {
+    @include text-style(black, 14px, $font-stack, 500, flex-start);
+  }
+
+  .fiche-content {
+    flex-direction: column;
+    gap: 1rem; // optionnel, pour espacer les deux blocs
+  }
+
+  .fiche-host-rating {
+    align-self: flex-start; // pour aligner à gauche si tu veux
+    width: 100%; // occuper toute la largeur si nécessaire
+  }
+}

@@ -1,3 +1,9 @@
+main,
+header {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
 #root {
   text-align: center;
   overflow-x: hidden;
@@ -8,24 +14,5 @@
 }
 
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-  /* ... */
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-  }
-  header,
-  footer,
-  main {
-    width: 100%;
-    /* Assure une largeur de 100% */
-  }
-  header {
-    flex-direction: column;
-  }
-}
 
 /*# sourceMappingURL=Home.css.map */

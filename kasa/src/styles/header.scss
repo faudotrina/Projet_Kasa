@@ -35,3 +35,42 @@ $font-stack: 'Montserrat';
   display: flex;
   gap: 57px;
 }
+
+@media (max-width: 767px) {
+  .header {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .logo {
+    width: 145px;
+  }
+
+  .headernav {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: $font-stack;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

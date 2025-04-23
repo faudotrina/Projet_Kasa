@@ -39,3 +39,24 @@ $font-stack: 'Montserrat';
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
+@media (max-width: 320px) {
+  .banner-text {
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .banner {
+    width: 93%;
+    margin: 0% 3% 0% 1%;
+  }
+
+  .banner-fiche {
+    height: 335px;
+  }
+}
